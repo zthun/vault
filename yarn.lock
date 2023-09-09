@@ -3465,9 +3465,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@zthun/vault-service@workspace:packages/vault-server":
+"@zthun/vault-service@workspace:packages/vault-service":
   version: 0.0.0-use.local
-  resolution: "@zthun/vault-service@workspace:packages/vault-server"
+  resolution: "@zthun/vault-service@workspace:packages/vault-service"
   dependencies:
     "@nestjs/common": ^10.2.4
     "@nestjs/core": ^10.2.4

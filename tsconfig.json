@@ -4,9 +4,8 @@
     "baseUrl": "packages",
     "target": "esnext",
     "paths": {
-      "@zthun/pokedex": ["pokedex/src/index"],
-      "@zthun/pokedex-api": ["pokedex-api/src/index"],
-      "@zthun/pokedex-web": ["pokedex-web/src/index"]
+      "@zthun/vault-client": ["vault-client/src/index"],
+      "@zthun/vault-service": ["vault-service/src/index"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

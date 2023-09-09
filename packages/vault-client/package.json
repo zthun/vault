@@ -1,0 +1,52 @@
+{
+  "name": "@zthun/vault-client",
+  "version": "1.0.0",
+  "description": "The client interfaces to access the vault.",
+  "author": "Anthony Bonta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zthun/vault",
+    "directory": "packages/vault-client"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build": "yarn build:cjs && yarn build:esm"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "images/**",
+    "dist/**",
+    "docs/**"
+  ],
+  "dependencies": {
+    "@zthun/helpful-fn": "^2.3.0",
+    "@zthun/helpful-internet": "^2.3.0",
+    "@zthun/lumberjacky-log": "^1.1.0",
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.2.4",
+    "@nestjs/core": "^10.2.4",
+    "@nestjs/microservices": "^10.2.4",
+    "@nestjs/platform-express": "^10.2.4",
+    "@nestjs/testing": "^10.2.4",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.4",
+    "vitest-mock-extended": "^1.2.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.2.4",
+    "@nestjs/microservices": "^10.2.4"
+  },
+  "sideEffects": false
+}

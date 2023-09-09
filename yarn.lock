@@ -3402,12 +3402,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/lumberjacky-log@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@zthun/lumberjacky-log@npm:1.1.0"
+"@zthun/lumberjacky-log@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@zthun/lumberjacky-log@npm:1.2.1"
   dependencies:
     lodash: ^4.17.21
-  checksum: ace4165c17f96c6c91fc4f9e4e4b08a8c32c1f3d7577c8794fa0fa6d8bd05513a820f46a5e7126c94f163dc5ecb38760d62894e0ba192d3d5756f9d685d9ee3a
+  checksum: 4fa32c4d8afaa7924ad778bf01dfc3da117c93c15b5131ec8a079670f195565feecee96d95e542fd6114415281e062e6be89626fdf319bb0e92c6e2ee1639e4f
+  languageName: node
+  linkType: hard
+
+"@zthun/lumberjacky-nest@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@zthun/lumberjacky-nest@npm:1.2.1"
+  dependencies:
+    "@zthun/lumberjacky-log": ^1.2.1
+    lodash: ^4.17.21
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.8.1
+  peerDependencies:
+    "@nestjs/common": ^10.2.4
+  checksum: f8d0652b4013bb096f00bc0729c58393764f4e1daad14c16ba58de5f33822e476096d2925c0ed8b184acc3b1a7f198459cedb364288d6e1d41b3af50df9612e4
   languageName: node
   linkType: hard
 
@@ -3451,7 +3465,8 @@ __metadata:
     "@nestjs/testing": ^10.2.4
     "@zthun/helpful-fn": ^2.3.0
     "@zthun/helpful-internet": ^2.3.0
-    "@zthun/lumberjacky-log": ^1.1.0
+    "@zthun/lumberjacky-log": ^1.2.1
+    "@zthun/lumberjacky-nest": ^1.2.1
     lodash: ^4.17.21
     reflect-metadata: ^0.1.13
     rxjs: ^7.8.1

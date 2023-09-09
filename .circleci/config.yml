@@ -56,8 +56,7 @@ jobs:
             export DOCKER_BUILDKIT=1
             docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
             docker buildx create --use
-            docker buildx build --target pokedex-web -t zthun/pokedex-web:latest -t zthun/pokedex-web:$(npm show @zthun/pokedex-web version) --progress=plain --platform linux/arm64,linux/amd64 --push .
-            docker buildx build --target pokedex-api -t zthun/pokedex-api:latest -t zthun/pokedex-api:$(npm show @zthun/pokedex-api version) --progress=plain --platform linux/arm64,linux/amd64 --push .
+            docker buildx build --target vault-service -t zthun/vault-service:latest -t zthun/vault-service:$(npm show @zthun/vault-service version) --progress=plain --platform linux/arm64,linux/amd64 --push .
 workflows:
   make:
     jobs:

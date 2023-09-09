@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@zthun/vault-client": ["../vault-client/src/index"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

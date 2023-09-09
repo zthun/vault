@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "packages",
+    "target": "esnext",
+    "paths": {
+      "@zthun/pokedex": ["pokedex/src/index"],
+      "@zthun/pokedex-api": ["pokedex-api/src/index"],
+      "@zthun/pokedex-web": ["pokedex-web/src/index"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["**/node_modules/**"]
+}

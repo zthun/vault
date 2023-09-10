@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file --@preserve */
 import { Module } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions } from '@nestjs/microservices';

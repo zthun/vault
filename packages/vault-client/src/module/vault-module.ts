@@ -1,7 +1,8 @@
 import { Inject, Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { sleep } from '@zthun/helpful-fn';
-import { ZLogEntryBuilder, ZLoggerConsole } from '@zthun/lumberjacky-log';
+import { IZLogger, ZLogEntryBuilder, ZLoggerContext } from '@zthun/lumberjacky-log';
+import { ZLoggerModule, ZLoggerToken } from '@zthun/lumberjacky-nest';
 import { IZVaultClient, ZVaultClient } from '../client/vault-client';
 
 export const ZVaultTimeoutToken = Symbol();
@@ -26,13 +27,14 @@ const ZVaultIntervalProvider = { provide: ZVaultIntervalToken, useValue: 3000 };
           port: 4000
         }
       }
-    ])
+    ]),
+    ZLoggerModule
   ],
   providers: [ZVaultProvider, ZVaultTimeoutProvider, ZVaultIntervalProvider],
   exports: [ZVaultProvider]
 })
 export class ZVaultModule {
-  private _logger = new ZLoggerConsole(console);
+  private _logger: IZLogger;
 
   /**
    * Initializes a new instance of this object.
@@ -43,8 +45,11 @@ export class ZVaultModule {
   public constructor(
     @Inject(ZVaultToken) private _vault: IZVaultClient,
     @Inject(ZVaultTimeoutToken) private _timeout: number,
-    @Inject(ZVaultIntervalToken) private _interval: number
-  ) {}
+    @Inject(ZVaultIntervalToken) private _interval: number,
+    @Inject(ZLoggerToken) logger: IZLogger
+  ) {
+    this._logger = new ZLoggerContext(ZVaultModule.name, logger);
+  }
 
   /**
    * Occurs when the module is initialized.

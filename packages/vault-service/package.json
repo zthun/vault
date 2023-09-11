@@ -1,6 +1,6 @@
 {
   "name": "@zthun/vault-service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A microservice that manages application configurations.",
   "author": "Anthony Bonta",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "@zthun/dalmart-db": "^1.1.1",
     "@zthun/dalmart-mongo": "^1.1.1",
     "@zthun/helpful-query": "^2.3.0",
-    "@zthun/vault-client": "^1.0.0",
+    "@zthun/vault-client": "^1.1.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },

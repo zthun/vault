@@ -9,21 +9,17 @@
     "url": "https://github.com/zthun/vault",
     "directory": "packages/vault-client"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.esm.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
-    "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build": "yarn build:cjs && yarn build:esm"
+    "build": "microbundle --format esm,cjs --tsconfig tsconfig.lib.json"
   },
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "images/**",
-    "dist/**",
-    "docs/**"
+    "dist"
   ],
   "dependencies": {
     "@zthun/helpful-fn": "^2.3.0",
@@ -41,6 +37,7 @@
     "@nestjs/microservices": "^10.2.4",
     "@nestjs/platform-express": "^10.2.4",
     "@nestjs/testing": "^10.2.4",
+    "microbundle": "^0.15.1",
     "typescript": "^5.2.2",
     "vitest": "^0.34.4",
     "vitest-mock-extended": "^1.2.1"

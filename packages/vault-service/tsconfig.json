@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
+    "declaration": false,
     "paths": {
       "@zthun/vault-client": ["../vault-client/src/index"]
     }

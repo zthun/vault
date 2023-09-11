@@ -20,9 +20,8 @@
     "access": "public"
   },
   "files": [
-    "images/**",
-    "dist/**",
-    "docs/**"
+    "dist",
+    "bin"
   ],
   "dependencies": {
     "@nestjs/common": "^10.2.4",

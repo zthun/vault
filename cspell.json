@@ -11,9 +11,15 @@
     "dalmart",
     "DOCKERHUB",
     "lumberjacky",
+    "microbundle",
     "nestjs",
     "zthun",
     "zthunworks"
   ],
-  "dictionaries": ["typescript", "node", "npm", "en_US"]
+  "dictionaries": [
+    "typescript",
+    "node",
+    "npm",
+    "en_US"
+  ]
 }

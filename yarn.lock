@@ -4799,7 +4799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zthun/vault-client@^1.0.0, @zthun/vault-client@workspace:packages/vault-client":
+"@zthun/vault-client@^1.1.0, @zthun/vault-client@workspace:packages/vault-client":
   version: 0.0.0-use.local
   resolution: "@zthun/vault-client@workspace:packages/vault-client"
   dependencies:
@@ -4837,7 +4837,7 @@ __metadata:
     "@zthun/dalmart-memory": ^1.1.1
     "@zthun/dalmart-mongo": ^1.1.1
     "@zthun/helpful-query": ^2.3.0
-    "@zthun/vault-client": ^1.0.0
+    "@zthun/vault-client": ^1.1.0
     nodemon: ^3.0.1
     reflect-metadata: ^0.1.13
     rxjs: ^7.8.1
